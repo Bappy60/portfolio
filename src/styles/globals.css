@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables (customizable) */
+:root {
+  --color-ui-bg: #0f1724; /* slate-ish dark background */
+  --color-text: #e6eef8;
+  --color-accent: #0ea5e9; /* default accessible accent (blue) */
+  --color-accent-2: #f59e0b; /* secondary accent (amber) */
+  --radius-md: 12px;
+}
+
+/* Light mode overrides */
+html.light {
+  --color-ui-bg: #f8fafc;
+  --color-text: #0b1220;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  background-color: var(--color-ui-bg);
+  color: var(--color-text);
+}
